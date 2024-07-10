@@ -1,0 +1,7 @@
+bs4
+chromedriver_autoinstaller
+requests
+selenium
+openpyxl
+lxml
+argparse
