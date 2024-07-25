@@ -23,17 +23,24 @@ This repository contains a web scraper built using Python and Selenium. The scra
 git clone https://github.com/btolarz/google-maps-companies-scrapper
 cd google-maps-companies-scrapper
 ```
-
-## Build Docker Image
+## With docker
+### Build Docker Image
 
 ```
 docker build -t scraper-image .
+```
+
+## Without docker
+
+```
+pip install --no-cache-dir -r requirements.txt
 ```
 
 # Usage
 
 ## Running the Scraper
 
+### With docker
 To run the scraper with a specific URL, use the following command:
 
 ```
@@ -41,6 +48,13 @@ docker run -v $(pwd):/app scraper-image "https://www.google.com/maps/search/wars
 ```
 
 This command mounts the current directory to the /app directory in the Docker container and runs the scraper with the specified URL. The output will be saved to data.xlsx in the current directory.
+
+### Without docker
+```
+python scraper.py "https://www.google.com/maps/search/warsztat/@53.1347098,23.1325697,13z"
+```
+
+Then
 
 # Logging
 
